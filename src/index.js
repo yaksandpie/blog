@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 import App from '../src/components/App';
+import Post from '../src/components/Post/Post';
 
 import './css/main.scss';
 
@@ -12,6 +13,7 @@ const Index = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path='/' component={App} />
+        <Route exact path='/post' component={Post} />
       </Switch>
     </BrowserRouter>
   );

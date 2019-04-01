@@ -3,22 +3,29 @@
 $base-layout-padding: 16px;
 
 .content {
-  border-bottom: 5px solid $black;
-  background: $white;
+  display: flex;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  color: $black;
 }
 
 .subject {
   padding: $base-layout-padding;
+  margin-bottom: 12px;
   background: $black;
   color: $white;
   font-weight: 600;
 }
 
 .title {
-  padding: $base-layout-padding;
+  padding: 8px $base-layout-padding;
   line-height: 1.2;
 }
 
 .date {
-  padding: 0 $base-layout-padding $base-layout-padding;
+  padding: 0 $base-layout-padding;
+  color: $light_grey;
 }

@@ -1,6 +1,9 @@
+// Breakpoints
 $bp-small: 500px;
 $bp-med: 650px;
 
+
+// Colors
 $blue_grey: #344e5c;
 $teal: #4ab19d;
 $yellow: #efc958;
@@ -11,6 +14,10 @@ $light_grey: #ccc;
 $black: #222;
 $white: #fefefe;
 
+
+// MISC
+$easing: ease-in-out;
+
 // Global mixins
 @mixin bp($bp-name) {
   @media (min-width: $bp-name) {
@@ -18,6 +25,7 @@ $white: #fefefe;
   }
 }
 
+// Export to JS
 :export {
   blue_grey: $blue_grey;
   teal: $teal;
@@ -30,4 +38,6 @@ $white: #fefefe;
 
   bp-small: $bp-small;
   bp-med: $bp-med;
+
+  easing: $easing;
 }

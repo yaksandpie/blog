@@ -17,18 +17,21 @@ const Home = () => {
           subject='coding'
           title='CSS property ordering, a new age approaches: Layout, Paint, & Composite'
           color={styles.teal}
+          date='March 32, 2019'
         />
 
         <PostCard
           subject='coding'
           title='React Hooks: useEverything()'
           color={styles.orange}
+          date='March 32, 2019'
         />
 
         <PostCard
           subject='coding'
           title='Code Quality and Consistency: Maintainers in ❤️'
           color={styles.red}
+          date='March 32, 2019'
         />
       </section>
     </main>

@@ -1,32 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import styles from './PostCard.module.scss';
 
-import { lightenColor } from '../../utilities';
 
-
-const PostCard = ({ subject, color, title }) => {
-  const contentStyles = {
-    borderBottomColor: color,
-    backgroundColor: lightenColor(color, 175),
-  };
-
+const PostCard = ({ subject, color, title, date }) => {
   const subjectStyles = { backgroundColor: color };
+  const linkStyles = { borderBottomColor: color };
+
 
   return (
-    <article className={styles.content} style={contentStyles}>
-      <section className={styles.subject} style={subjectStyles}>
-        {subject}
-      </section>
+    <article className={styles.content}>
+      <Link to='/post' className={styles.link} style={linkStyles}>
+        <section className={styles.subject} style={subjectStyles}>
+          {subject}
+        </section>
 
-      <h3 className={styles.title}>
-        {title}
-      </h3>
+        <h4 className={styles.date}>
+          {date}
+        </h4>
 
-      <h4 className={styles.date}>
-        March 32, 2019
-      </h4>
+        <h3 className={styles.title}>
+          {title}
+        </h3>
+      </Link>
     </article>
   );
 };
