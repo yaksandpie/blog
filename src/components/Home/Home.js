@@ -27,6 +27,7 @@ const Home = () => {
           {postCards && postCards.map((card) => (
             <PostCard
               key={card.id}
+              id={card.id}
               subject={card.subject}
               title={card.title}
               color={card.color}

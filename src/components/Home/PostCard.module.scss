@@ -18,6 +18,11 @@ $base-layout-padding: 16px;
   background: $black;
   color: $white;
   font-weight: 600;
+  transition: opacity $timing $easing;
+
+  .content:hover & {
+    opacity: .8;
+  }
 }
 
 .title {

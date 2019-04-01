@@ -1,6 +1,7 @@
 // Breakpoints
 $bp-small: 500px;
 $bp-med: 650px;
+$bp-large: 1000px;
 
 
 // Colors
@@ -17,6 +18,7 @@ $white: #fefefe;
 
 // MISC
 $easing: ease-in-out;
+$timing: 200ms;
 
 // Global mixins
 @mixin bp($bp-name) {

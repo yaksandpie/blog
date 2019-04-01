@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom';
 import styles from './PostCard.module.scss';
 
 
-const PostCard = ({ subject, color, title, date }) => {
+const PostCard = ({ subject, color, title, date, id }) => {
   const subjectStyles = { backgroundColor: color };
   const linkStyles = { borderBottomColor: color };
 
-
   return (
     <article className={styles.content}>
-      <Link to='/post' className={styles.link} style={linkStyles}>
+      <Link to={`/post/${id}`} className={styles.link} style={linkStyles}>
         <section className={styles.subject} style={subjectStyles}>
           {subject}
         </section>
@@ -33,6 +32,8 @@ PostCard.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,
   subject: PropTypes.string,
+  date: PropTypes.string,
+  id: PropTypes.number,
 };
 
 

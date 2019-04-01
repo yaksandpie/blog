@@ -1,0 +1,37 @@
+@import '../../css/variables';
+
+.content {
+  padding: 32px;
+  border-top: 5px solid $black;
+
+  @include bp($bp-large) {
+    border-top-width: 10px;
+  }
+}
+
+.meta {
+  margin-bottom: 16px;
+  border-radius: 3px;
+
+  @include bp($bp-large) {
+    margin-bottom: 32px;
+  }
+}
+
+.title {
+  line-height: 1.5;
+}
+
+.date {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.author {
+  color: $blue_grey;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.2;
+}

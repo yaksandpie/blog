@@ -13,7 +13,7 @@ const Index = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/post' component={Post} />
+        <Route exact path='/post/:id' component={Post} />
       </Switch>
     </BrowserRouter>
   );

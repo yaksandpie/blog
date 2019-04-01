@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { useState, useEffect } from 'react';
 
 export const localStorageLoadState = (stateName) => {

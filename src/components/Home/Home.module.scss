@@ -2,6 +2,15 @@
 
 .intro {
   position: relative;
+  margin-bottom: 48px;
+  box-shadow:
+    0 4px 8px 0 rgba($black, .1),
+    inset 0 4px 8px 0 rgba($white, .1);
+  @include bp($bp-large) {
+    max-height: 350px;
+    margin-bottom: 64px;
+    overflow: hidden;
+  }
 }
 
 .hi {
@@ -12,10 +21,6 @@
   font-weight: 600;
 }
 
-.hero {
-  margin-bottom: 48px;
-}
-
 .postCards {
   display: grid;
   row-gap: 32px;
@@ -23,5 +28,11 @@
 
   @include bp($bp-small) {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include bp($bp-large) {
+    padding: 0 64px;
+    row-gap: 64px;
+    column-gap: 64px;
   }
 }
