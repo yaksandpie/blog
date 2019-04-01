@@ -1,40 +1,41 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import { useFetchAPI } from '../../utilities';
+import Header from '../Header/Header';
+import PostCard from './PostCard';
 
 import hero from '../../images/hero.jpg';
-import PostCard from './PostCard';
 import styles from './Home.module.scss';
 
+import { mockPostCards } from '../../mockData';
+
+
 const Home = () => {
+  const postCards = useFetchAPI('/', null, mockPostCards);
+
   return (
-    <main>
-      <div className={styles.intro}>
-        <img className={styles.hero} src={hero} alt='Man waving, creating a waving shadow' />
-        <h1 className={styles.hi}>Hi.</h1>
-      </div>
+    <Fragment>
+      <Header />
 
-      <section className={styles.postCards}>
-        <PostCard
-          subject='coding'
-          title='CSS property ordering, a new age approaches: Layout, Paint, & Composite'
-          color={styles.teal}
-          date='March 32, 2019'
-        />
+      <main>
+        <div className={styles.intro}>
+          <img className={styles.hero} src={hero} alt='Man waving, creating a waving shadow' />
+          <h1 className={styles.hi}>Hi.</h1>
+        </div>
 
-        <PostCard
-          subject='coding'
-          title='React Hooks: useEverything()'
-          color={styles.orange}
-          date='March 32, 2019'
-        />
-
-        <PostCard
-          subject='coding'
-          title='Code Quality and Consistency: Maintainers in ❤️'
-          color={styles.red}
-          date='March 32, 2019'
-        />
-      </section>
-    </main>
+        <section className={styles.postCards}>
+          {postCards && postCards.map((card) => (
+            <PostCard
+              key={card.id}
+              subject={card.subject}
+              title={card.title}
+              color={card.color}
+              date={card.date}
+            />
+          ))}
+        </section>
+      </main>
+    </Fragment>
   );
 };
 
