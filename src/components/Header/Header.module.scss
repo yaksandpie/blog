@@ -1,0 +1,18 @@
+@import '../../css/variables';
+
+.content {
+  padding: 8px;
+  background: $black;
+  text-align: center;
+}
+
+.logo {
+  $size: 40px;
+  $color: $white;
+
+  height: $size;
+  width: $size;
+  stroke-width: 3px;
+  stroke: $color;
+  fill: $color;
+}

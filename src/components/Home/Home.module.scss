@@ -1,0 +1,27 @@
+@import '../../css/variables';
+
+.intro {
+  position: relative;
+}
+
+.hi {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  font-weight: 600;
+}
+
+.hero {
+  margin-bottom: 48px;
+}
+
+.postCards {
+  display: grid;
+  row-gap: 32px;
+  column-gap: 16px;
+
+  @include bp($bp-small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

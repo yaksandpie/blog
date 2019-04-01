@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background: $white;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.2;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}

@@ -1,0 +1,33 @@
+$bp-small: 500px;
+$bp-med: 650px;
+
+$blue_grey: #344e5c;
+$teal: #4ab19d;
+$yellow: #efc958;
+$orange: #e17a47;
+$red: #ef3d59;
+
+$light_grey: #ccc;
+$black: #222;
+$white: #fefefe;
+
+// Global mixins
+@mixin bp($bp-name) {
+  @media (min-width: $bp-name) {
+    @content;
+  }
+}
+
+:export {
+  blue_grey: $blue_grey;
+  teal: $teal;
+  yellow: $yellow;
+  orange: $orange;
+  red: $red;
+  light_grey: $light_grey;
+  black: $black;
+  white: $white;
+
+  bp-small: $bp-small;
+  bp-med: $bp-med;
+}
